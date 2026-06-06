@@ -1,75 +1,61 @@
-# React + TypeScript + Vite
+# LawIntel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AI‑powered onchain transaction intelligence for the Pharos network.**  
+Simulate, analyze, and understand blockchain transactions before you sign — no code, no risk.
 
-Currently, two official plugins are available:
+![License](https://img.shields.io/badge/license-MIT-blue)
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38bdf8)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- 🔍 **Intent Parsing** – Describe a transaction in plain English; AI extracts the details (recipient, amount, token).
+- 🛡️ **Risk Engine** – Detects unlimited approvals, unverified contracts, large transfers, and more.
+- 📋 **Plain‑English Explanations** – Each simulation comes with a human‑readable risk report.
+- 🔗 **Contract Analyzer** – Checks verification status, bytecode, and links to Pharosscan.
+- 💰 **Wallet Dashboard** – View native PHRS/PROS and ERC‑20 token balances.
+- 📊 **Batch Balance Checker** – Check balances for multiple addresses at once.
+- 🪄 **Airdrop Simulation** – Test batch token transfers before executing.
+- 📡 **Live Transaction Feed** – See recent transactions for your wallet.
+- 📜 **Script Export** – Generate ready‑to‑run Web3 scripts (Viem) from your analysis.
+- 🔐 **Wallet‑Based Authentication** – Connect your wallet and sign a message; no backend required.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Layer               | Technology                                      |
+|---------------------|-------------------------------------------------|
+| Frontend            | React 19, TypeScript, Vite                      |
+| Styling             | Tailwind CSS (minimal, flat design)             |
+| Blockchain          | Wagmi, Viem, RainbowKit                         |
+| State Management    | Zustand                                         |
+| Data Fetching       | React Query                                     |
+| Database            | Supabase (Postgres)                             |
+| AI                  | DeepSeek / Groq (llama‑3.1‑8b‑instant)         |
+| Blockchain Data     | Pharos Skill Engine (RPC + Explorer API)        |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📋 Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Before running the project, ensure you have:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Node.js 18+ and npm/yarn
+- A [Supabase](https://supabase.com) project (free tier works)
+- A [Reown (WalletConnect)](https://cloud.reown.com) Project ID
+- A [Groq](https://console.groq.com) API key (or DeepSeek) for AI features
+- The Pharos network RPC and explorer endpoints (already configured)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/lawintel.git
+cd lawintel
