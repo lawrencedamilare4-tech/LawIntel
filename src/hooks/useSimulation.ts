@@ -8,7 +8,9 @@ import type { AnalysisResult } from '@/types/analysis'
 import { usePublicClient, useAccount } from 'wagmi'
 import { parseEther } from 'viem'
 
+
 export function useSimulation() {
+
   const user = useAuthStore((s) => s.user)
   const queryClient = useQueryClient()
   const publicClient = usePublicClient()        // connected chain’s public client
